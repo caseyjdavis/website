@@ -1,17 +1,22 @@
 :root {
-  --background-body: #fff;
-  --text-main: #36393b;
-  --text-secondary: #6b6f72;
-  --primary-color: #548e9b;
-  --font-family-serif: Merriweather, serif;
+  --background-body: #fbf1c7;
+  --text-main: #928374;
+  --text-secondary: #d79921;
+  --primary-color: #cc241d;
+  --font-family-serif: 'Roboto', serif;
   --font-family-sans: 'Fira Sans', sans-serif;
 }
 
 :root.theme-dark {
-  --background-body: #202122;
-  --text-main: #fff;
-  --text-secondary: #ccc;
-  --primary-color: #548e9b;
+  --background-body: #282828;
+  --text-main: #ebdbb2;
+  --text-secondary: #cc241d;
+  --primary-color: #d65d0e;
+}
+
+mark {
+  background-color:#98971a;
+  color:#282828;
 }
 
 html {
@@ -54,7 +59,7 @@ h6 {
 
 h1 {
   font-family: var(--font-family-serif);
-  font-size: 4em;
+  font-size: 3em;
   margin: 0 0 1em 0;
 }
 
@@ -104,7 +109,7 @@ li p {
 }
 
 a {
-  color: inherit;
+  color: #98971a;
   transition: color linear 0.15s;
 }
 
@@ -277,5 +282,31 @@ input[name='theme-toggle'] {
   ol {
     font-size: 1.2rem;
     margin: 1em 0;
+  }
+
+  /* Scrollbar styles */
+
+  ::-webkit-scrollbar {
+    width: 15px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: var(--container);
+    border-radius: 30px;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: var(--background);
+    border-radius: 10px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: var(--pink);
+  }
+
+  /* Scrollbar styles for Firefox */
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: var(--line) var(--container);
   }
 }
